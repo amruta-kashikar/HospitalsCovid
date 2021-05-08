@@ -21,7 +21,6 @@ public class SmsHelper extends AsyncTask<String, String, String> {
         try {
             String urlRawString= String.format("https://stark-earth-78790.herokuapp.com/index.php?message_body=%s&receiver_number=%s",msg,contact );
             URL urlDEBUG =new URL(urlRawString);
-            //is use karna hi nahi hein ab final tak oke oke
             //URL urlPRODUCTION =new URL(urlRawString+"&production_enable=true");
             HttpURLConnection conn = (HttpURLConnection) urlDEBUG.openConnection();
             conn.setDoOutput(true);
